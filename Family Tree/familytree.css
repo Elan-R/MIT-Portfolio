@@ -1,0 +1,50 @@
+html {
+    background-color: #B2AABB;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.full {
+    height: 100%;
+    width: 100%;
+}
+
+.centered {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+form {
+    position: relative;
+    text-align: center;
+}
+
+.person {
+    position: absolute;
+    display: inline-block;
+    border: solid 2px;
+    padding: 5px;
+    white-space: nowrap;
+    background-color: #50A3B7;
+    border-color: #3A6077;
+    border-radius: 5px;
+    cursor: default;
+}
+
+#tree {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+.hidden {
+    display: none;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-US" class="full">
+
+    <head>
+
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+        <title>Family Tree</title>
+        <meta name="author" content="Elan Ronen"/>
+
+        <link rel="stylesheet" href="familytree.css"/>
+        <script src="familytree.js" defer></script>
+
+    </head>
+
+    <body class="full">
+
+        <!-- Holds boxes of names and svg lines to connect them -->
+        <div id="tree" class="hidden">
+            <svg class="full"></svg>
+        </div>
+
+        <!-- File picker -->
+        <form class="centered">
+            <p>Choose a JSON file that holds family tree data and click "Build Tree".</p>
+            <p>The JSON should be a list of objects with the keys "name", "id", "partner", and "children".</p>
+            <p>The "id" and "partner" keys should have string values with other objects' ids and the "children" key should have a list of strings value of other objects' ids.</p>
+            <p>If multiple files are chosen, objects with equivalent "id" values will be treated as the same.</p>
+            <br/>
+            <label for="files">Choose Files:</label>
+            <input name="files" id="files" type="file" multiple accept=".json"/>
+            <br/>
+            <!--label for="texts">JSON:</label-->
+            <!--input name="texts" id="texts"/-->
+            <!--br/-->
+            <br/>
+            <input type="submit" value="Build Tree"/>
+        </form>
+
+    </body>
+
+</html>
